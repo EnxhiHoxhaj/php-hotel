@@ -40,7 +40,7 @@
 
     ];
 
-    // var_dump($hotels)
+    var_dump($hotels)
     
 ?>
 
@@ -58,24 +58,27 @@
 <body>
     <div class="container">
     <h1>Hotel consigliati per te!</h1>
-        <table class="table">
-            <thead>
-                ...
-            </thead>
-            <tbody>
-                <tr class="table-active">
-                ...
-                </tr>
-                <tr>
-                ...
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td colspan="2" class="table-active">Larry the Bird</td>
-                <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">First</th>
+                <th scope="col">Description</th>
+                <th scope="col">Parking</th>
+                <th scope="col">Vote</th>
+                <th scope="col">Distance to center</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php foreach($hotels as $hotel):?>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+        <?php endforeach;?>
+        </tbody>
+</table>
     </div>
 
 </body>
