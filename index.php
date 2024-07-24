@@ -60,22 +60,24 @@
     <h1>Hotel consigliati per te!</h1>
     <table class="table">
         <thead>
-            <tr>
-                <th scope="col">First</th>
-                <th scope="col">Description</th>
-                <th scope="col">Parking</th>
-                <th scope="col">Vote</th>
-                <th scope="col">Distance to center</th>
-            </tr>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Parking</th>
+                    <th scope="col">Vote</th>
+                    <th scope="col">Distance to center</th>
+                </tr>
         </thead>
         <tbody>
         <?php foreach($hotels as $hotel):?>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td><?php echo $hotel["name"];?></td>
+                <td><?php echo $hotel["description"];?></td>
+                <td><?php echo $hotel["parking"] ;?></td>
+                <td><?php echo $hotel["vote"];?></td>
+                <td><?php echo $hotel["distance_to_center"]?> kg</td>
             </tr>
+            
         <?php endforeach;?>
         </tbody>
 </table>
